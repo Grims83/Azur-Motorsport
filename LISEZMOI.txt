@@ -1,0 +1,72 @@
+COMMENT UTILISER LE SITE
+=========================
+
+1) OUVRIR LE SITE
+   Double-clique simplement sur "index.html" — il s'ouvre dans ton
+   navigateur (Chrome, Firefox, etc.), pas besoin de serveur ni d'internet
+   (à part pour charger les polices d'écriture, connexion internet requise
+   pour ce détail visuel uniquement).
+
+2) METTRE À JOUR CHAQUE MARDI
+   Ouvre le fichier "data.js" avec un éditeur de texte simple
+   (Bloc-notes, TextEdit, Notepad++, VS Code...).
+   Modifie uniquement les valeurs entre guillemets " " dans :
+     - raceWeek         → les courses de la semaine complète, sur l'accueil
+                           (jour, piste, heure, statut) — PAS de date précise,
+                           juste le jour (LMU : du mardi au mardi suivant)
+     - weekUpdatedOn    → la date à laquelle tu as fait la mise à jour
+     - enduranceEvent   → l'événement précis où l'équipe est inscrite
+                           (page "Endurance Week"), avec date exacte et
+                           notes de piste
+     - palmares         → résultats passés de l'équipe (page "Palmarès")
+     - bonusItems       → clips et screenshots affichés directement sur
+                           la page "Bonus" (pas de lien externe)
+   Enregistre le fichier, puis rafraîchis la page dans le navigateur (F5).
+
+3) AJOUTER TON LOGO
+   Le logo Azur Motorsport est déjà en place (assets/logo.png).
+   Pour le changer, remplace simplement ce fichier par un autre du
+   même nom.
+
+4) LIENS GOOGLE DRIVE
+   Dans data.js, remplace le lien "REMPLACE_PAR_TON_LIEN_DOCS" par
+   le vrai lien de partage de ton dossier Google Drive (documents,
+   règlements). Les setups sont maintenant sur le site directement,
+   voir point 6.
+
+5) AJOUTER DES CLIPS / SCREENSHOTS SUR LA PAGE BONUS
+   Tout s'affiche directement dans la page, pas de lien à cliquer.
+     - Screenshot : dépose l'image dans "assets/bonus/" et indique le nom
+       du fichier dans "image" (ex: "image: \"depart-spa.jpg\"")
+     - Clip vidéo local : dépose le .mp4 dans "assets/bonus/" et indique
+       le nom dans "video" (ex: "video: \"depassement.mp4\"")
+     - Clip YouTube/Twitch : mets le lien "embed" dans "embed"
+       (ex: https://www.youtube.com/embed/ID_VIDEO — pas le lien normal,
+       le lien "embed" spécifiquement)
+   Ne renseigne qu'un seul de ces trois champs par élément.
+
+6) AJOUTER DES FICHIERS DE SETUP (.rar)
+   Dépose tes fichiers .rar dans "assets/setups/", puis dans data.js,
+   dans "setupFiles", ajoute une ligne avec le nom exact du fichier :
+     { title: "Nürburgring GP — GT3", note: "Sec", file: "gt3-nurb.rar" }
+   Chaque fichier apparaît sur la page "Setup" avec un bouton de
+   téléchargement direct — pas besoin d'ouvrir le Drive.
+
+7) ANIMATION EN CHANGEANT DE PAGE
+   Sur Chrome / Edge, un fondu animé s'affiche automatiquement en passant
+   d'une page à l'autre. Sur Firefox (support pas encore disponible), le
+   site fait un simple fondu d'entrée à la place — le contenu reste
+   toujours identique, seul l'effet visuel change selon le navigateur.
+
+STRUCTURE DES FICHIERS
+   index.html            → page d'accueil (calendrier complet de la semaine)
+   endurance-week.html   → événement précis où l'équipe est inscrite
+   palmares.html         → résultats endurance passés (équipe & solo)
+   bonus.html            → clips, screenshots, moments forts
+   setup.html            → fichiers de réglages .rar téléchargeables
+   data.js               → LE fichier à modifier chaque mardi
+   style.css             → apparence du site (thème carbone/chrome Azur Motorsport)
+   script.js             → génère les pages à partir de data.js
+   assets/logo.png       → logo Azur Motorsport
+   assets/bonus/         → dossier pour tes images/clips de la page Bonus
+   assets/setups/        → dossier pour tes fichiers .rar de setup

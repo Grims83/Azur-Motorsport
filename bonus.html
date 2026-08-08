@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Bonus — Équipe Simracing</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="speed-lines" aria-hidden="true">
+  <span class="streak" style="top:8%;  width:180px; animation-duration:5.5s; animation-delay:-1s;"></span>
+  <span class="streak" style="top:16%; width:120px; animation-duration:4.2s; animation-delay:-3.4s;"></span>
+  <span class="streak" style="top:24%; width:200px; animation-duration:6.8s; animation-delay:-0.5s;"></span>
+  <span class="streak" style="top:33%; width:140px; animation-duration:5s;   animation-delay:-2.2s;"></span>
+  <span class="streak" style="top:42%; width:170px; animation-duration:4.6s; animation-delay:-4.1s;"></span>
+  <span class="streak" style="top:51%; width:110px; animation-duration:6.2s; animation-delay:-1.7s;"></span>
+  <span class="streak" style="top:60%; width:190px; animation-duration:5.3s; animation-delay:-3.9s;"></span>
+  <span class="streak" style="top:69%; width:130px; animation-duration:4.8s; animation-delay:-0.9s;"></span>
+  <span class="streak" style="top:78%; width:160px; animation-duration:6.5s; animation-delay:-2.8s;"></span>
+  <span class="streak" style="top:88%; width:150px; animation-duration:5.7s; animation-delay:-4.6s;"></span>
+</div>
+
+
+<header class="plate">
+  <div class="brand">
+    <img class="brand-mark" src="assets/logo.png" alt="Logo Azur Motorsport">
+    <div>
+      <div class="brand-name" data-team-name>AZUR MOTORSPORT</div>
+      <div class="brand-tagline" data-team-tagline>Simracing</div>
+    </div>
+  </div>
+  <nav class="top-nav">
+    <a href="index.html">Accueil</a>
+    <a href="endurance-week.html">Endurance Week</a>
+    <a href="palmares.html">Palmarès</a>
+    <a href="bonus.html" class="active">Bonus</a>
+    <a href="setup.html">Setup</a>
+  </nav>
+</header>
+
+<main class="wrap">
+
+  <section class="hero" style="padding-bottom: 8px;">
+    <span class="eyebrow">Backstage</span>
+    <h1>Bonus</h1>
+    <p class="lead">Clips, screenshots et moments forts glanés au fil des courses.</p>
+  </section>
+
+  <section class="block" style="margin-top: 24px;">
+    <div class="bonus-grid" data-bonus-grid></div>
+  </section>
+
+</main>
+
+<footer>
+  <span data-team-name>AZUR MOTORSPORT</span> · Site interne d'équipe — usage personnel
+</footer>
+
+<script src="data.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
